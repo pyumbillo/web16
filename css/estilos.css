@@ -1,0 +1,117 @@
+/**{
+	border:2px solid red; 
+	padding: 10px;
+	margin: 10px;
+}*/
+body{
+	font-family: 'Allerta', sans-serif;
+	margin: 0;
+}
+.titulo{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 70px;
+	margin-bottom: 0;
+	margin-top: 70px
+}
+.title-a
+{
+	font-size: 24px;
+	margin-top: 0;
+}
+.contenidos{
+	color:#1F313C;
+	
+}
+
+.logotipo{
+	display: inline-block;
+}
+.contenido h2
+{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 35px;	
+}
+.menu{
+	font-size: 24px;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+
+}
+.menu li
+{
+	display: inline-block;
+	margin-left: 30px
+}
+
+
+.title-a{
+	font-size: 24px;
+}
+.title-b{
+	font-size: 50px;
+	margin-bottom: 20;
+}
+
+.portada
+{
+	background-image: url("../images/desk-laptop-notebook-pen.jpg");
+	color:white;
+	padding: 20px;
+	
+	
+}
+.modulo{
+	margin: 10px;
+	padding:10px;
+	/*overflow: hidden;*/
+	border:1px solid #1F313C;
+	border-radius: 4px;
+	position: relative;
+}
+.modulo ol{
+	padding: 0;
+
+}
+.portada button{
+	margin-bottom: 70px;
+}
+.contenedor{
+	width: 800px;
+	margin: auto;
+}
+.contenedor-modulos-a{
+	margin-left: 75px;
+	padding-left: 20px;
+}
+.contenedor-modulos-b{
+	margin-left: 75px;
+
+}
+
+.derecha{
+	float: right;
+	position: relative;
+	top: -122px;
+}
+.izquierda{
+	float: left;
+	position: relative;
+	top: -35px;
+}
+.header{
+	position: relative;
+}
+.footer{
+background: #273b47;
+}
+.contacto img{
+	display: block;
+}
+.contacto strong{
+	display: block;
+}
+.contacto a {
+	color: white;
+	text-decoration: none;
+}
