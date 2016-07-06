@@ -1,0 +1,50 @@
+body{
+	background-color: #1d3557;
+	color:#f1faee;
+	font-family: Arial;
+	margin: 0;
+	padding-bottom: 200px
+}
+.caja{
+	width: 200px;
+	border:1px solid #a8dadc;
+	margin-bottom: 50px;
+}
+.tipo-a{
+	margin: 0 auto;
+}
+.tipo-b{
+margin-left: calc(100vw / 2 - 100px);
+}
+
+.tipo-c{
+	border: 1px solid #457b9d;
+	padding: 10px;
+	text-align: center;
+}
+.tipo-c .caja{
+	display: inline-block;
+	text-align: left;
+}
+.relative
+{
+	position: relative;
+	border: 1px solid #457b9d;
+	height: 400px;
+
+}
+.tipo-d{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.tipo-e{
+	position: absolute;
+	left: 50%;
+	margin-left: -100px
+}
+.tipo-f{
+	display: flex;
+	justify-content:center;
+}
