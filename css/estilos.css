@@ -159,10 +159,11 @@ input:focus,textarea:focus
 	width: 100%;
 background: #273b47;
 padding: 50px 10px;
-position: fixed;
+/*position: fixed;*/
 bottom: 0;
 margin-right: auto;
 margin-left: auto;
+padding-top: 30px
 
 }
 .contacto
@@ -261,14 +262,107 @@ margin-left: auto;
  }
  .contenedor-modulos-a{
  	height: auto;
+ 	margin:0;
  }
  .contenedor-modulos-b
  {
  	position: static;
  	margin: 0;
  }
+
  /*end contenidos*/
 
 
+
+}
+@media screen and (max-width: 767px){
+	/*footer*/
+	.footer .contenedor{		
+		display: block;
+	}
+	.contacto{
+		margin: 0 auto;
+	}
+	.formulario{
+		display: block;
+		margin: 0 auto;
+		width: 300px;
+	}
+	 .intereses label {
+ 		display: block;
+ 		font-size: 16px;
+
+ 	}
+	.col1{
+		margin: 0;
+	}
+	input[type="text"],
+	input[type="email"]
+	{
+		font-size: 16px;
+		padding: 5px;
+	}
+	textarea{
+		width: 100%;
+	}
+	input[type="radio"],
+	input[type="checkbox"]
+	{
+		zoom:1.5;
+	}
+	/*end footer*/
+}
+@media screen and (max-width: 650px){
+	.header{
+
+		text-align: center;
+	}
+	.logotipo{
+		margin: 0;
+	}
+	.menu{
+		
+		position: static;
+		display: block;
+	}
+	.menu li:first-child{
+		margin: 0;
+	}
+	.menu ul{
+		padding: 0;
+	}
+
+}
+@media screen and (max-width: 500px){
+	.menu li{
+		
+		display: block;
+		margin: 0;
+		padding: 8px 0;
+		border-bottom: 1px white solid;
+	}
+	.menu li:before{
+		display: none;
+	}
+	.menu li:first-child{
+		border-top: 1px white solid;
+	}
+	.portada{
+		text-align: center;
+	}
+	.titulo{
+		font-size: 20px;
+	}
+	.title-a
+	{
+		font-size: 14px;
+	}
+	/*fin portada/*
+	/*modulo*/
+	.modulo img{
+		width: 200px;
+		height: auto;
+	}
+	/*end modulo*/
 
 }
