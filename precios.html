@@ -3,9 +3,11 @@
 <head>
 	<title>Curso Taller ArcGis	</title>
 	<meta charset="utf-8">	
+	<meta name= "viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
 	
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
 </head>
 <body>
 	<header id="header" class="header  background"><!-- Header -->
@@ -13,7 +15,8 @@
 			<figure class="logotipo">  <!-- logotipo-->
 			<img src="images/logo.jpg" width="100px" height="50px" alt="Curso Taller ArcGis">
 			</figure>	
-			<nav class="menu"> <!-- menu-->
+			<span id="burguer-button" class="burguer-button icon-menu "></span>
+			<nav id= "menu" class="menu"> <!-- menu-->
 				<ul>
 					<li>
 						<a href="index.html">Inicio</a>
@@ -104,5 +107,32 @@
 			</form>
 		</div>
 	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
+	<script>
+	var consulta= window.matchMedia('(max-width:500px)');
+	var $burguerButton=document.getElementById('burguer-button');
+	var $menu=document.getElementById('menu');
+	consulta.addListener(mediaQuery);
+	function toggleMenu(){
+				$menu.classList.toggle('active');
+	}
+	function mediaQuery(){
+		if(consulta.matches)
+		{			
+			$burguerButton.addEventListener('touchstart',toggleMenu);
+			
+			console.log("entra al menu");
+		}
+		else{
+			$burguerButton.removeEventListener('touchstart',toggleMenu);
+		}
+	}
+	mediaQuery();
+	
+	// lazy loading
+      var bLazy = new Blazy({
+          selector: 'img'
+      });
+	</script>
 </body>
 </html>

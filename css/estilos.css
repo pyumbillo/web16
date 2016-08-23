@@ -262,6 +262,24 @@ padding-top: 30px
   margin: 50px 0;
 }
 
+.burguer-button{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	background:red;
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	left: 20px;
+	top: 0;
+	cursor: pointer;
+	z-index: 3;
+	display: none;
+
+}
+
+
 @media screen and (max-width: 800px)
 {
 	/*portada*/
@@ -372,6 +390,10 @@ padding-top: 30px
 
 }
 @media screen and (max-width: 500px){
+	/*Portada*/
+	.burguer-button{
+		display: block;
+	}
 	.portada .contenedor{
 		position: static;
 	}
@@ -427,22 +449,33 @@ padding-top: 30px
 		height: auto;
 	}
 	/*end modulo*/
+/* footer */
+  .col2 {
+    align-items: stretch;
+  }
+  /* footer */
 
+}
 
+video {
+  width: 100%;
+}
 
-.burguer-button{
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	border-radius: 50%;
-	background:red;
-	display: inline-block;
-	text-align: center;
+.video-resposive-contenedor{
+	position: relative;
+	padding:-top:56.25%;
+}
+.video-resposive-src{
 	position: absolute;
-	left: 20px;
+	left: 0;
+	right: 0;
 	top: 0;
-	cursor: pointer;
-	z-index: 3;
-
-
+	border: 0;
+	width: 100%;
+	height: 100%;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .background {
+    background-image: url('../images/background2x.png');
+  }
 }

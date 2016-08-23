@@ -6,14 +6,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
 	
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<meta name= "viewport" content="witdh=device-width, initial-scale=1">
+	<meta name= "viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<section id="portada" class="portada background"> <!-- Portada -->
 	<header id="header" class="header contenedor"><!-- Header -->
 		
 		<figure class="logotipo">  <!-- logotipo-->
-		<img src="images/logo.jpg" width="100px" height="50px" alt="Curso Taller ArcGis">
+		<img src="images/logo.jpg" srcset="images/logo.jpg 1x,images/logo.jpg 2x" width="100px" height="50px" alt="Curso Taller ArcGis">
 		</figure>	
 		<span id="burguer-button" class="burguer-button icon-menu "></span>
 		<nav id= "menu"class="menu"> <!-- menu-->
@@ -36,10 +36,12 @@
 			<a href="#contenido" class="button">Ver más</a><!-- boton -->
 		</div>
 	</section>
-	<section id="contenido" class="contenidos contenedor"> <!--contenido del curso -->
+	<section id="contenido" class="contenidos contenedor"> <!--contenido del curso -->		
+		
 		<h2>Contenido del Curso-Taller</h2><!-- titulo -->
+		
 		<article class="modulo">
-			<img src="images/gis.png" alt=" Modulo 1" width="300" class="derecha" >
+			<img data-src="images/gis.png|images/logo2x.jpg" alt=" Modulo 1" width="300" class="derecha" >
 			<div class="contenedor-modulos-a">
 				<h3>Entendiendo el SIG</h3>
 				<ol>
@@ -51,7 +53,7 @@
 			</div>
 		</article><!-- guitarra 1 -->
 		<article class="modulo">		
-			<img src="images/gis.png" alt=" Modulo 1" width="300" class="izquierda" >
+			<img data-src="images/gis.png" alt=" Modulo 1" width="300" class="izquierda" >
 			<div class="contenedor-modulos-b">
 				<h3>Analizando informacion</h3>
 				<ol>
@@ -108,11 +110,22 @@
 			</form>
 		</div>
 	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.5.4/blazy.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 	<script>
 	var consulta= window.matchMedia('(max-width:500px)');
 	var $burguerButton=document.getElementById('burguer-button');
 	var $menu=document.getElementById('menu');
 	consulta.addListener(mediaQuery);
+	function toggleMenu(){
+				$menu.classList.toggle('active');
+	}
+	function showMenu(){
+				$menu.classList.add('active');
+	}
+	function hiddenMenu(){
+				$menu.classList.remove('active');
+	}
 	function mediaQuery(){
 		if(consulta.matches)
 		{			
@@ -125,9 +138,19 @@
 		}
 	}
 	mediaQuery();
-	function toggleMenu(){
-				$menu.classList.toggle('active');
-	}
+	
+	// lazy loading
+      var bLazy = new Blazy({
+          selector: 'img'
+      });
+      //Gestos Touch
+      var $body=document.body;
+     var gestos = new Hammer($body);
+	gestos.on('swipeleft', hiddenMenu);
+	gestos.on('swiperight',function(){
+		console.log("ok");
+		$menu.classList.add('active');
+	});
 	</script>
 </body>
 </html>
